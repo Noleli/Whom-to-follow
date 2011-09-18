@@ -5,8 +5,13 @@ tryReplace("h2.user-rec-component a.title-link", "Whom to follow");
 tryReplace("h2.user-rec-component span.dashboard-component-title", "Whom to follow");
 tryReplace(".who-to-follow-header h1", "Whom to follow");
 
-// Don't replace the title unless it actually is "WHo to follow"
-setInterval(function() { $("title").html($("title").html().replace("Who to follow", "Whom to follow")); }, 250);
+$(document).ready(init);
+
+function init()
+{
+	// Don't replace the title unless it actually contains "Who to follow"
+	setInterval(function() { $("title").text($("title").text().replace("Who to follow", "Whom to follow")); }, 250);
+}
 
 function tryReplace(selector, string)
 {
