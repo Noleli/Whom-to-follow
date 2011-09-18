@@ -1,8 +1,11 @@
 tryReplace("#global-nav-whotofollow a", "Whom to Follow");
+tryReplace("#global-nav-who_to_follow a", "Whom to Follow");
 tryReplace("#recommended_users h2.sidebar-title span", "Whom to follow");
 tryReplace("h2.user-rec-component a.title-link", "Whom to follow");
+tryReplace("h2.user-rec-component span.dashboard-component-title", "Whom to follow");
 tryReplace(".who-to-follow-header h1", "Whom to follow");
 
+// Don't replace the title unless it actually is "WHo to follow"
 setInterval(function() { $("title").html($("title").html().replace("Who to follow", "Whom to follow")); }, 250);
 
 function tryReplace(selector, string)
